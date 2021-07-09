@@ -1,0 +1,50 @@
+# C-
+my solved C++ problems
+#include <iostream>
+#include <iomanip>  
+using namespace std;
+
+
+int main()
+{
+    int x, y;
+    char z;
+    double sum = 0;
+    double Coel = 0;
+    double Rato = 0;
+    double Sapo = 0;
+
+    
+    cin >> x;
+
+    for (int i = 0; i < x; i++)
+    {
+        cin >> y >> z;
+        sum += y;
+        if(z=='C')
+        { 
+            Coel += y;
+        }
+        else if (z == 'R')
+        {
+            Rato += y;
+        }
+        else if (z == 'S')
+        {
+            Sapo += y;
+        }
+        
+    }
+    cout << "Total: " << sum << " cobaias" << endl;
+    cout << "Total de coelhos: " << Coel << endl;
+    cout << "Total de ratos: " << Rato << endl;
+    cout << "Total de sapos: " << Sapo << endl;
+    cout << "Percentual de coelhos: " << fixed << setprecision(2) << (Coel *100) / sum << " %" << endl;
+    cout << "Percentual de ratos: " << fixed << setprecision(2) << (Rato * 100) / sum << " %" << endl;
+    cout << "Percentual de sapos: " <<fixed<< setprecision(2) << (Sapo * 100) / sum <<  " %" << endl;
+   
+
+    
+    
+    return 0;
+}
