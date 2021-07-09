@@ -1,0 +1,22 @@
+# C-
+my solved C++ problems
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+  int size=20;
+   float N[size];
+
+   for(int i=0;i<size;i++)
+   {
+       cin>>N[i];
+   }
+    for(int i=0;i<size;i++)
+   {
+       cout<<"N["<<i<<"]"<<" = "<<N[size-i-1]<<endl;
+   }
+ 
+    return 0;
+}
