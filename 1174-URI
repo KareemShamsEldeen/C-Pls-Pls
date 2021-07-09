@@ -1,0 +1,24 @@
+# C-
+my solved C++ problems
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+   int size=100;
+   float A[size];
+
+   for(int i=0;i<size;i++)
+   {
+       cin>>A[i];
+   }
+
+   for(int j=0;j<size;j++)
+    {
+        if(A[j]<=10)
+            cout<<"A["<<j<<"]"<<" = "<<fixed<<setprecision(1)<<A[j]<<endl;
+    }
+    return 0;
+}
