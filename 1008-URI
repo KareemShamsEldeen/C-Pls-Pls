@@ -1,0 +1,22 @@
+# C-
+my solved C++ problems
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    int num,h;
+    float p;
+
+    cin>>num>>h>>p;
+
+    cout<<"NUMBER = "<<num<<endl;
+
+    cout<<"SALARY = U$ "<<fixed<<setprecision(2)<<h*p<<endl;
+
+
+
+
+return 0;
+}
