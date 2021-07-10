@@ -1,0 +1,33 @@
+# C-
+my solved C++ problems
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  int size,f;
+  int sum=0;
+
+  cin>>size>>f;
+
+  int a[size];
+
+  for(int i=0;i<size;i++)
+  {
+      cin>>a[i];
+
+ if(a[i]<=f)
+ {
+     sum++;
+ }
+ else
+ {
+     sum=sum+2;
+ }
+
+  }
+
+  cout<<sum;
+return 0;
+}
