@@ -1,0 +1,42 @@
+# C-
+my solved C++ problems
+#include <iostream>
+ 
+using namespace std;
+ 
+void low(long long a[],int size)
+{
+ 
+int loow=a[0];
+int pos=1;
+ 
+ for(int i=1;i<size;i++)
+  {
+      if(a[i]<loow)
+      {
+         loow=a[i];
+         pos=i+1;
+      }
+  }
+  cout<<loow<<" "<<pos;
+}
+ 
+ 
+ 
+int main()
+{
+  int size;
+  cin>>size;
+ 
+  long long a[size];
+  for(int i=0;i<size;i++)
+  {
+      cin>>a[i];
+  }
+ 
+ 
+ 
+  low(a,size);
+ 
+    return 0;
+}
