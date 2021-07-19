@@ -1,0 +1,43 @@
+# C-
+my solved C++ problems
+#include <iostream>
+ 
+using namespace std;
+ 
+void abs(long long a[],int size)
+{
+    long long sum=0;
+ 
+ for(int i=0;i<size;i++)
+  {
+      sum+=a[i];
+  }
+ 
+  if(sum<0)
+  {
+      cout<<sum*-1;
+  }
+  else
+  {
+      cout<<sum;
+  }
+ 
+ 
+}
+ 
+ 
+ 
+int main()
+{
+  int size;
+  cin>>size;
+ 
+  long long a[size];
+  for(int i=0;i<size;i++)
+  {
+      cin>>a[i];
+  }
+ 
+  abs(a,size);
+    return 0;
+}
