@@ -1,0 +1,40 @@
+# C-
+my solved C++ problems
+#include <iostream>
+ 
+using namespace std;
+ 
+void rev(long long a[],int size)
+{
+ 
+long long b[size];
+ 
+ for(int i=0,j=size-1;i<size;i++,j--)
+  {
+      b[i]=a[j];
+  }
+ for(int i=0;i<size;i++)
+  {
+      cout<<b[i]<<" ";
+  }
+}
+ 
+ 
+ 
+int main()
+{
+  int size;
+  cin>>size;
+ 
+  long long a[size];
+  for(int i=0;i<size;i++)
+  {
+      cin>>a[i];
+  }
+ 
+ 
+ 
+  rev(a,size);
+ 
+    return 0;
+}
