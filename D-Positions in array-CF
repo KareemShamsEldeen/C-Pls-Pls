@@ -1,0 +1,39 @@
+# C-
+my solved C++ problems
+#include <iostream>
+ 
+using namespace std;
+ 
+void pos(long long a[],int size)
+{
+ 
+ 
+ 
+ for(int i=0;i<size;i++)
+  {
+      if(a[i]<=10)
+      {
+          cout<<"A["<<i<<"] = "<<a[i]<<endl;
+      }
+  }
+}
+ 
+ 
+ 
+int main()
+{
+  int size;
+  cin>>size;
+ 
+  long long a[size];
+  for(int i=0;i<size;i++)
+  {
+      cin>>a[i];
+  }
+ 
+ 
+ 
+  pos(a,size);
+ 
+    return 0;
+}
