@@ -1,0 +1,238 @@
+# C-
+my solved C++ problems
+#include <iostream>
+
+using namespace std;
+
+class node
+{
+public:
+    int data;
+    node * next;
+
+
+    node()
+    {
+        next= NULL ;
+    }
+
+    node(int x)
+    {
+        data=x;
+        next=NULL;
+    }
+};
+
+
+class linkedlist
+{
+public:
+    node* head;
+
+    //constrcter
+    linkedlist()
+    {
+        head=NULL;
+    }
+
+
+    // is empty function
+    bool isempty()
+    {
+        if(head==NULL)
+            return true;
+        else
+            return false;
+    }
+
+
+    //add at first function
+    void addfirst(int x)
+    {
+        node * n=new node(x);
+        if(isempty()==true)
+        {
+            head=n;
+        }
+        else
+        {
+            n->next=head;
+            head=n;
+        }
+    }
+
+
+    //add at function
+    void addat(int x,int t)
+    {
+
+         node * n=new node(x);
+
+         if (t==0)
+         {
+             addfirst(x);
+         }
+         else
+         {
+             node * c=head;
+
+             while(t>1)
+                {
+					c= c->next;
+					--t;
+				}
+				n->next=c->next;
+				c->next=n;
+                }
+
+    }
+
+
+    //remove the first function
+    void removefirst()
+    {
+        if(isempty()==false)
+        {
+            node * c=head;
+            head=head->next;
+            c->next=NULL;
+
+            delete c;
+
+
+        }
+    }
+
+
+    //display function
+    void print()
+    {
+        if(isempty()==false)
+        {
+            node * c=head;
+
+            while(c != NULL)
+            {
+                cout<<c->data<<" ";
+                c=c->next;
+            }
+        }
+        else
+        {
+            cout<<"XXXX";
+        }
+    }
+
+
+    //search function
+    int search(int x)
+    {
+        if(isempty()==false)
+        {
+            int count=0;
+
+            node*c=head;
+
+            while(c!=NULL)
+            {
+                if(c->data==x)
+                    return x;
+
+                c=c->next;
+                count++;
+            }
+        }
+        else
+            return -1;
+    }
+
+
+    //add at last function
+    void addlast(int x)
+    {
+        node * n=new node(x);
+
+        if(isempty()==true)
+        {
+           addfirst(x);
+           head=n;
+        }
+        else
+        {
+            node * c=head;
+            while(c->next !=NULL)
+            {
+                c=c->next;
+            }
+            c->next=n;
+        }
+    }
+
+
+    //remove last function
+    void removelast()
+    {
+        if(isempty()==false)
+        {
+            node * c=head;
+            while(c->next->next!=NULL)
+                c=c->next;
+
+                delete c->next;
+            c->next=NULL;
+        }
+    }
+
+
+    //remove at function
+    void removeat(int t)
+    {
+        if(isempty()==true)
+        {
+            cout<<"empty";
+        }
+        else
+        {
+            if(t==0)
+            {
+                removefirst();
+            }
+            else
+            {
+                node * c=head;
+                node * temp;
+                while(t>0)
+                {
+                    --t;
+                    temp=c;
+                    c=c->next;
+
+                }
+            temp->next=c->next;
+            c->next=NULL;
+            }
+
+        }
+    }
+
+};
+
+
+
+int main()
+{
+    linkedlist x;
+
+    x.addfirst(7);
+    x.addfirst(11);
+    //x.addfirst(5);
+    x.addfirst(7);
+    //x.addfirst(13);
+    //x.addat(2,2);
+    //x.removelast();
+    x.removeat(2);
+    x.print();
+
+
+    return 0;
+}
